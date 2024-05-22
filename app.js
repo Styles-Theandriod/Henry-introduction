@@ -311,16 +311,30 @@
 //   alert('Hello world  ')
 // })
 
-const Button = document.querySelector('.bn')
+// const Button = document.querySelector('.bn')
 
-window.onscroll = () => {
-  if(window.pageYOffset > 100){
-    Button.classList.remove('hidden')
-  }else{
-    Button.classList.add('hidden')
+// window.onscroll = () => {
+//   if(window.pageYOffset > 100){
+//     Button.classList.remove('hidden')
+//   }else{
+//     Button.classList.add('hidden')
+//   }
+// };
+
+// Button.addEventListener('click', ()=>{
+//   window.scrollTo({top:0, behavior:'smooth'})
+// })
+
+
+
+document.getElementById('fetchData').addEventListener('click', ()=>{
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET','https://jsonplaceholder.typicode.com/posts/1',true)
+  xhr.onreadystatechange = function(){
+    if(xhr.readyState  === 4 && xhr.status === 200){
+      var Data = JSON.parse(xhr.responseText);
+      document.getElementById('content').innerText =`Title: ${Data.title}\nBody: ${Data.body}`
+    }
   }
-};
-
-Button.addEventListener('click', ()=>{
-  window.scrollTo({top:0, behavior:'smooth'})
+  xhr.send()
 })
