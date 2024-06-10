@@ -286,7 +286,7 @@
 
 // function clickBtn(e) {
 //   e.preventDefault();
-  
+
 //   let UserInput = document.querySelector(".user").value;
 //   let PassInput = document.querySelector(".pass").value;
 //   let title = document.querySelector(".title")
@@ -306,7 +306,6 @@
 
 // Btn.addEventListener("click", clickBtn);
 
-
 // $('.btn').on('click',()=>{
 //   alert('Hello world  ')
 // })
@@ -325,16 +324,167 @@
 //   window.scrollTo({top:0, behavior:'smooth'})
 // })
 
+// document.getElementById('fetchData').addEventListener('click', ()=>{
+//   var xhr = new XMLHttpRequest();
+//   xhr.open('GET','https://jsonplaceholder.typicode.com/posts/1',true)
+//   xhr.onreadystatechange = function(){
+//     if(xhr.readyState  === 4 && xhr.status === 200){
+//       var Data = JSON.parse(xhr.responseText);
+//       document.getElementById('content').innerText =`Title: ${Data.title}\nBody: ${Data.body}`
+//     }
+//   }
+//   xhr.send()
+// })
+
+// document.getElementById('fetchData').addEventListener('click', function(){
+//   setTimeout(function() {
+//     window.location.href = 'http://www.google.com/';
+//   }, 3000)
+// })
+
+// window.open('http://www.google.com', '_blank')
+
+// let opacity = 1.0;
+
+// function reduceOpacity(){
+//   if (opacity > 0){
+//     opacity -= 0.1; // Decrease opacity by 0.01
+//     document.body.style.opacity = opacity;
+//   }else{
+//     clearInterval(fadeoutInterval);// Clear interval when opacity reaches zero
+//   }
+// }
+
+// const fadeoutInterval = setInterval(reduceOpacity, 100);
+
+// Creating New Windows
+
+const Phone = {
+  phoneBrand: "Iphone",
+  phoneModel: "phone 11 pro max",
+  phonePrice: 10000000,
+  phoneColor: "black",
+  allProducts: ["Samsung", "Techno", "Android iphone"],
+  transfer: true,
+  id: 1,
+};
+
+// Conditional statements in javascript
+// if condition
+// tenary operator
+// switch conditional statements
+
+let yearOfBirth = 2000;
+currentYear = 2024;
+
+if (yearOfBirth) {
+  let age = yearOfBirth - currentYear;
+  console.log(`Your age is ${age}`);
+  console.log("Your age is", age);
+}
+
+let Playing = false;
+let song = "amapiano playing";
+
+if (Playing === false) {
+  Playing = true;
+  console.log(song);
+} else {
+  Playing = false;
+  song = "amapiano is not playing";
+  console.log(song);
+}
+
+const priceValue = document.querySelector(".price");
+let price = 20000;
+let radioPrice = 10000;
+
+if (price > radioPrice) {
+  console.log("price is greater than radio");
+  priceValue.innerHTML = "price is greater than radio";
+} else if (price < radioPrice) {
+  // document.write('price is less than radio');
+  priceValue.innerHTML = "price is less than radio";
+} else {
+  // document.write('bro go and save more to buy yor radio');
+  priceValue.innerHTML = "bro go and save more to buy yor radio";
+}
+
+let value = 200;
+
+value == 100 ? console.log("this is 100") : console.log("this is not 100");
+
+let date = new Date()
+console.log(date.getDay());
+
+switch (date.getDay()) {
+  case 1:
+    console.log('Today is Monday');
+    break;
+  case 2:
+    console.log('Today is Tuesday');
+    break;
+  case 3:
+    console.log('Today is Wednesday');
+    break;
+  case 4:
+    console.log('Today is Thursday');
+    break;
+  case 5:
+    console.log('Today is Friday');
+    break;
+  case 6:
+    console.log('Today is Satuday');
+    break;
+  case 0:
+    console.log('Today is Sunday');
+    break;
+
+  default:
+    console.log('Invalid date format')
+}
 
 
-document.getElementById('fetchData').addEventListener('click', ()=>{
-  var xhr = new XMLHttpRequest();
-  xhr.open('GET','https://jsonplaceholder.typicode.com/posts/1',true)
-  xhr.onreadystatechange = function(){
-    if(xhr.readyState  === 4 && xhr.status === 200){
-      var Data = JSON.parse(xhr.responseText);
-      document.getElementById('content').innerText =`Title: ${Data.title}\nBody: ${Data.body}`
-    }
+let countValue = 10;
+let countItem = document.querySelector('.countItem');
+
+let timerId = setInterval(() => {
+  countValue--;
+  countItem.innerHTML = countValue;
+  
+  if (countValue <= 0) {
+    countItem.innerHTML = 'Game is over';
+    clearInterval(timerId);
   }
-  xhr.send()
-})
+}, 1000);
+
+// const element = array[index];
+let finite = Infinity
+console.log(typeof(finite));
+console.log(finite.toString());
+
+// for loop 
+// for in loop 
+// for of loop 
+// while loop 
+// do while loop 
+
+let Namelist = ['FreeFighter', 'San adres', 'Fifa', 'Call of Duty', 'Last of Us', 'God of war']
+// for (let index = 0; index < Namelist.length; index++) {
+//   console.log(Namelist[index]);
+// }
+
+for(let x in Namelist) {
+  console.log(Namelist[x]);
+}
+
+let NavList = ['Home', 'About', 'Services', 'Contacts']
+let navlist = document.querySelector('.nav_list')
+
+for(let x in NavList) {
+  let li = document.createElement('li')
+  navlist.appendChild(li)
+  li.className = 'nav_listsss'
+  li.innerHTML = NavList[x]
+}
+

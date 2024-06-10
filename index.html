@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
     <!-- <div class="navigation">
@@ -87,7 +87,7 @@
       </div>
       <div class="theme-btn-container"></div>
   </section> -->
-    <a href="#bottom" >Go to bottom</a>
+    <!-- <a href="#bottom" >Go to bottom</a>
     <div class="navigation" id="nav">
       <a href="" class="logo">Media Girls</a>
       <ul>
@@ -139,7 +139,7 @@
     </div>
 
     <div class="wrapper">
-      <!-- <img src="./WhatsApp Image 2024-01-18 at 4.58.00 PM.jpeg" alt=""> -->
+    <img src="./WhatsApp Image 2024-01-18 at 4.58.00 PM.jpeg" alt="">
     </div>
 
     <div class="grid-items change_value">
@@ -171,6 +171,8 @@
 
     <div id="content"></div>
     <button id="fetchData">Fetch Data</button>
+
+    
 
     <!-- <button id="myButton">Click Me</button>
 
@@ -204,6 +206,41 @@
         brother.style.backgroundColor = "red";
       });
     </script> -->
+    <!-- <h1  class="price"></h1>
+    <h1 class="countItem" style="text-align: center; font-size: 100px;">0</h1>
+
+    <ul class="nav_list">
+      
+    </ul> -->
+
+    <div class="container">
+      <form action="" class="calculator" name="calc">
+        <input type="text" class="value" readonly name="txt"/>
+        <span class="num clear" onclick="calc.txt.value=''"><i>C</i></span>
+        <span class="num" onclick="calc.txt.value +='/'"><i>/</i></span>
+        <span class="num" onclick="calc.txt.value +='*'"><i>*</i></span>
+        <span class="num" onclick="calc.txt.value +='7'"><i>7</i></span>
+        <span class="num" onclick="calc.txt.value +='8'"><i>8</i></span>
+        <span class="num" onclick="calc.txt.value +='9'"><i>9</i></span>
+        <span class="num" onclick="calc.txt.value +='-'"><i>-</i></span>
+        <span class="num" onclick="calc.txt.value +='4'"><i>4</i></span>
+        <span class="num" onclick="calc.txt.value +='5'"><i>5</i></span>
+        <span class="num" onclick="calc.txt.value +='6'"><i>6</i></span>
+        <span class="num plus" onclick="calc.txt.value +='+'"><i>+</i></span>
+        <span class="num" onclick="calc.txt.value +='1'"><i>1</i></span>
+        <span class="num" onclick="calc.txt.value +='2'"><i>2</i></span>
+        <span class="num" onclick="calc.txt.value +='3'"><i>3</i></span>
+        <span class="num" onclick="calc.txt.value +='0'"><i>0</i></span>
+        <span class="num" onclick="calc.txt.value +='00'"><i>00</i></span>
+        <span class="num" onclick="calc.txt.value +='.'"><i>.</i></span>
+        <span class="num equal" onclick="document.calc.txt.value =eval(calc.txt.value)"><i>=</i></span>
+        <span class="num equals" onclick="document.calc.txt.value +='Loading Dino...'"><i class="fa fa-cog fa-spin"></i></span>
+      </form>
+    </div>
+
+
+
+
     <script src="./app.js"></script>
   </body>
 </html>
